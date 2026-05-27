@@ -9,6 +9,7 @@ export default async function HomePage() {
   return (
     <main>
       <h1>ボードゲーム一覧</h1>
+      <Link href="/games/new">新しいボードゲームを追加</Link>
 
       <ul>
         {games.map((game) => (
@@ -22,7 +23,6 @@ export default async function HomePage() {
               />
               <h2>{game.title}</h2>
             </Link>
-
             <p>
               {game.minPlayers}〜{game.maxPlayers}人
             </p>

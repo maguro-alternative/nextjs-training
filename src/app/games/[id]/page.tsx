@@ -28,9 +28,10 @@ export default async function GameDetailPage({ params }: Props) {
         height={320}
       />
 
-      <p>
-        プレイ人数: {game.minPlayers}〜{game.maxPlayers}人
-      </p>
+      <p> プレイ人数: {game.minPlayers}〜{game.maxPlayers}人</p>
+      <p> 所要時間: {game.playTimeMinutes}分</p>
+      <p> {game.memo}</p>
+      <Link href={`/games/${game.id}/edit`}>編集</Link>
     </main>
   );
 }
